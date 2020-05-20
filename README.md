@@ -29,35 +29,35 @@ The output saved to file after running the script above looks like this:
 
 ```
 {dict:  ¬
+    { ¬
+        {_:"some_string", s:"Hello World"}, ¬
+        {_:"some_date",   t:"1955-02-24 00:00:00"}, ¬
+        {_:"constants",   d: ¬
+            {dict:  ¬
                 { ¬
-                                {_:"some_string", s:"Hello World"}, ¬
-                                {_:"some_date",   t:"1955-02-24 00:00:00"}, ¬
-                                {_:"constants",   d: ¬
-                                                {dict:  ¬
-                                                                { ¬
-                                                                                {_:"math", d: ¬
-                                                                                                {dict:  ¬
-                                                                                                                { ¬
-                                                                                                                                {_:"pi",       f:"3.14159265359"}, ¬
-                                                                                                                                {_:"phi",      f:"1.61803398875"}, ¬
-                                                                                                                                {_:"one",      i:"1"}, ¬
-                                                                                                                                {_:"infinity", s:"∞"} ¬
-                                                                                                                }, v:1 ¬
-                                                                                                } ¬
-                                                                                } ¬
-                                                                }, v:1 ¬
-                                                } ¬
-                                }, ¬
-                                {_:"some_list",   a: ¬
-                                                { ¬
-                                                                {s:"A"}, ¬
-                                                                {i:"1"}, ¬
-                                                                {f:"2.0"}, ¬
-                                                                {b:true}, ¬
-                                                                {s:"E"} ¬
-                                                } ¬
-                                } ¬
+                    {_:"math", d: ¬
+                        {dict:  ¬
+                            { ¬
+                                {_:"pi",       f:"3.14159265359"}, ¬
+                                {_:"phi",      f:"1.61803398875"}, ¬
+                                {_:"one",      i:"1"}, ¬
+                                {_:"infinity", s:"∞"} ¬
+                            }, v:1 ¬
+                        } ¬
+                    } ¬
                 }, v:1 ¬
+            } ¬
+        }, ¬
+        {_:"some_list",   a: ¬
+            { ¬
+                {s:"A"}, ¬
+                {i:"1"}, ¬
+                {f:"2.0"}, ¬
+                {b:true}, ¬
+                {s:"E"} ¬
+            } ¬
+        } ¬
+    }, v:1 ¬
 }
 ```
 
