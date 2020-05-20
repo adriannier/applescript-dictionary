@@ -8,9 +8,71 @@ Example:
 
 ```
 set dict to newDictionary()
-dict's addValueForKey("last_refresh", current date)
+
+dict's addValueForKey("some_string", "Hello World")
+dict's addValueForKey("some_date", date "Thursday, 1955-02-24 at 12:00:00 AM")
+        
+dict's addValueForKeyPathRecursively("constants/math/pi", 3.14159265359)
+dict's addValueForKeyPath("constants/math/phi", 1.61803398875)
+dict's addValueForKeyPath("constants/math/one", 1)
+dict's addValueForKeyPath("constants/math/infinity", "∞")
+        
+dict's addValueForKey("some_list", {"A", 1, 2.0, true, "E"})
+
+dict's addValueForKey("delete_me", "This will not be in the dictionary")
+dict's removeValueForKey("delete_me")
+        
 dict's writeToFile("~/Desktop/DictionaryTest.applescript")
 ```
+
+The output saved to file after running the script above looks like this:
+
+```
+{dict:  ¬
+                { ¬
+                                {_:"some_string", s:"Hello World"}, ¬
+                                {_:"some_date",   t:"1955-02-24 00:00:00"}, ¬
+                                {_:"constants",   d: ¬
+                                                {dict:  ¬
+                                                                { ¬
+                                                                                {_:"math", d: ¬
+                                                                                                {dict:  ¬
+                                                                                                                { ¬
+                                                                                                                                {_:"pi",       f:"3.14159265359"}, ¬
+                                                                                                                                {_:"phi",      f:"1.61803398875"}, ¬
+                                                                                                                                {_:"one",      i:"1"}, ¬
+                                                                                                                                {_:"infinity", s:"∞"} ¬
+                                                                                                                }, v:1 ¬
+                                                                                                } ¬
+                                                                                } ¬
+                                                                }, v:1 ¬
+                                                } ¬
+                                }, ¬
+                                {_:"some_list",   a: ¬
+                                                { ¬
+                                                                {s:"A"}, ¬
+                                                                {i:"1"}, ¬
+                                                                {f:"2.0"}, ¬
+                                                                {b:true}, ¬
+                                                                {s:"E"} ¬
+                                                } ¬
+                                } ¬
+                }, v:1 ¬
+}
+```
+
+Special care was placed upon the human readability of the produced output. Once compiled in Script Editor the white space might minimally change. Notice that each key/value pair is a native AppleScript record. The following property names are used:
+
+- _: Key (underscore)
+- d: dictionary
+- b: boolean
+- i: integer
+- f: real (float)
+- s: text (string)
+- t: date (time)
+- a: list (array)
+- r: record
+- v: unknown value
 
 
 ## run
