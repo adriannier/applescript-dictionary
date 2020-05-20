@@ -1,6 +1,6 @@
-# Dictionary v1
+# AppleScript Dictionary v1
 
-A native AppleScript implementation of a key/value storage. The resulting data can be written to disk as a raw text AppleScript file (.applescript) and both opened with a text editor and loaded when run within Script Editor or using osascript.
+A native AppleScript implementation of a mutable key/value storage. The resulting data can be written to disk as a raw text AppleScript file (.applescript) and both opened with a text editor and loaded when run within Script Editor or using osascript.
 
 Values of type integer, real, and date are converted to text during serialization and the processed is reversed when reading the file back. This process should work regardless of the difference in the sending or receiving system’s differences in date and number formats.
 
