@@ -1,8 +1,8 @@
 # AppleScript Dictionary v1
 
-A native AppleScript implementation of a mutable key/value storage. The resulting data can be written to disk as a raw text AppleScript file (.applescript) and both opened with a text editor and loaded when run within Script Editor or using osascript.
+A native AppleScript implementation of a mutable key/value storage. The resulting data can be written to disk as a raw text `.applescript` file and both opened with a text editor and loaded when run within Script Editor or using osascript.
 
-Values of type integer, real, and date are converted to text during serialization and the process is reversed when reading the file back. This should work regardless of any differences in the sending or receiving system’s date and number formats.
+Values of type `integer`, `real`, and `date` are converted to text during serialization and the process is reversed when reading the file back. This should work regardless of any differences in the sending or receiving system’s date and number formatting settings.
 
 Example:
 
@@ -10,7 +10,7 @@ Example:
 set dict to newDictionary()
 
 dict's addValueForKey("some_string", "Hello World")
-dict's addValueForKey("some_date", date "Thursday, 1955-02-24 at 12:00:00 AM")
+dict's addValueForKey("some_date", date "Thursday, 1955-02-24 at 9:41:00 AM")
         
 dict's addValueForKeyPathRecursively("constants/math/pi", 3.14159265359)
 dict's addValueForKeyPath("constants/math/phi", 1.61803398875)
@@ -31,7 +31,7 @@ The output saved to file after running the script above looks like this:
 {dict:  ¬
     { ¬
         {_:"some_string", s:"Hello World"}, ¬
-        {_:"some_date",   t:"1955-02-24 00:00:00"}, ¬
+        {_:"some_date",   t:"1955-02-24 09:41:00"}, ¬
         {_:"constants",   d: ¬
             {dict:  ¬
                 { ¬
@@ -63,16 +63,16 @@ The output saved to file after running the script above looks like this:
 
 Special care was placed upon the human readability of the produced output. Once compiled in Script Editor the white space might minimally change. Notice that each key/value pair is a native AppleScript record. The following property names are used:
 
-- _: Key (underscore)
-- d: dictionary
-- b: boolean
-- i: integer
-- f: real (float)
-- s: text (string)
-- t: date (time)
-- a: list (array)
-- r: record
-- v: unknown value
+- `_` Key (underscore)
+- `d` dictionary
+- `b` boolean
+- `i` integer
+- `f` real (float)
+- `s` text (string)
+- `t` date (time)
+- `a` list (array)
+- `r` record
+- `v` unknown value
 
 
 ## run
