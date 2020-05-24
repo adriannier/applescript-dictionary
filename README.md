@@ -2,7 +2,7 @@
 
 ## Overview
 
-A native AppleScript implementation of a mutable key/value storage. The resulting data can be written to disk as a raw text `.applescript` file and both opened with a text editor and loaded when run within Script Editor or using osascript.
+A native AppleScript implementation of a mutable key/value storage. The resulting data can be written to disk as a raw text `.applescript` file and both opened with a text editor and loaded when run within Script Editor or using osascript. 
 
 Values of type `integer`, `real`, and `date` are converted to text during serialization and the process is reversed when reading the file back. This should work regardless of any differences in the sending or receiving system’s date and number formatting settings.
 
@@ -13,17 +13,17 @@ set dict to newDictionary()
 
 dict's addValueForKey("some_string", "Hello World")
 dict's addValueForKey("some_date", date "Thursday, 1955-02-24 at 9:41:00 AM")
-        
+	
 dict's addValueForKeyPathRecursively("constants/math/pi", 3.14159265359)
 dict's addValueForKeyPath("constants/math/phi", 1.61803398875)
 dict's addValueForKeyPath("constants/math/one", 1)
 dict's addValueForKeyPath("constants/math/infinity", "∞")
-        
+	
 dict's addValueForKey("some_list", {"A", 1, 2.0, true, "E"})
 
 dict's addValueForKey("delete_me", "This will not be in the dictionary")
 dict's removeValueForKey("delete_me")
-        
+	
 dict's writeToFile("~/Desktop/DictionaryTest.applescript")
 ```
 
@@ -76,36 +76,35 @@ Special care was placed upon the human readability of the produced output. Once 
 - `r` record
 - `v` unknown value
 
-
-## run
+## [run](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L89)
 
 Runs all tests.
 
-## shortTest()
+## [shortTest()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L101)
 
 Performs a short test.
 
-## speedTest()
+## [speedTest()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L140)
 
 Performs a speed test creating 1000 dictionary items and modifying them.
 
-## longTest()
+## [longTest()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L182)
 
 Performs a long test.
 
-## newDictionaryWithValueForKey(k, v)
+## [newDictionaryWithValueForKey(k, v)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L433)
 
 Creates a new dictionary adding the value for the specified key.
 
-## newDictionary()
+## [newDictionary()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L447)
 
 Returns an empty dictionary.
 
-### Script: Dictionary
+## [Script: Dictionary](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L453)
 
-#### General
+### General
 
-##### isDictionary(obj)
+#### [isDictionary(obj)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L473)
 
 Checks whether the specified object is a dictionary.
 
@@ -116,7 +115,7 @@ set dict2 to newDictionary()
 return dict's isDictionary(dict2)
 ```
 
-##### empty()
+#### [empty()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L496)
 
 Checks whether this dictionary is empty.
 
@@ -126,12 +125,12 @@ set dict to newDictionary()
 
 if dict's empty() then
 
-    -- Do something
-    
+	-- Do something
+	
 end if
 ```
 
-##### allKeys()
+#### [allKeys()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L527)
 
 Returns all keys.
 
@@ -141,14 +140,14 @@ set dict to newDictionary()
 
 repeat with i from 1 to 4
 
-    dict's addValueForKey("key_" & i as text, i)
-    
+	dict's addValueForKey("key_" & i as text, i)
+	
 end repeat
 
 return dict's allKeys()
 ```
 
-##### keyCount()
+#### [keyCount()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L556)
 
 Returns the count of all keys.
 
@@ -157,14 +156,14 @@ set dict to newDictionary()
 
 repeat with i from 1 to 4
 
-    dict's addValueForKey("key_" & i as text, i)
-    
+	dict's addValueForKey("key_" & i as text, i)
+	
 end repeat
 
 return dict's keyCount()
 ```
 
-##### allKeysRecursively()
+#### [allKeysRecursively()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L584)
 
 Returns the keys of this dictionary and all its nested dictionaries. The keys of nested dictionaries are returned as key paths.
 
@@ -174,11 +173,11 @@ set dict to newDictionary()
 dict's addValueForKeyPathRecursively("a/b/c/d/e/f", "test")
 dict's addValueForKeyPathRecursively("a/b/x/d/e/f", "test")
 dict's addValueForKeyPathRecursively("z/b/x/d/e/f", "test")
-                
+				
 return dict's allKeysRecursively()
 ```
 
-##### allValues()
+#### [allValues()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L610)
 
 Returns all values of this dictionary.
 
@@ -187,172 +186,174 @@ set dict to newDictionary()
 
 repeat with i from 1 to 4
 
-    dict's addValueForKey("key_" & i as text, i)
-    
+	dict's addValueForKey("key_" & i as text, i)
+	
 end repeat
 
 return dict's allValues()
 ```
 
-#### Key
+### Key
 
-##### existsKey(aKey)
+#### [existsKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L649)
 
 Returns true if the specified key exists, otherwise false.
 
-##### tryKey(aKey, defaultValue)
+#### [tryKey(aKey, defaultValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L667)
 
 If the specified key exists, its value is returned. Otherwise the value specified as **defaultValue** is returned.
 
-##### addValueForKey(aKey, aValue)
+#### [addValueForKey(aKey, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L688)
 
 Adds the value for the specified key. The key must not exists. If it does an error 2 is raised.
 
-##### removeValueForKey(aKey)
+#### [removeValueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L716)
 
 Removes the value for the specified key. The key must exist otherwise error 1 is raised.
 
-##### setValueForKey(aKey, aValue)
+#### [setValueForKey(aKey, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L746)
 
 Sets the value for the specified key. The key must exist otherwise error 1 is raised.
 
-##### valueForKey(aKey)
+#### [valueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L765)
 
 Returns the value for the specified key. The key must exist otherweise error 1 is raised.
 
-##### typeForKey(aKey)
+#### [typeForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L783)
 
 Returns a string representing the type of the value for the specified key. The key must exist otherweise error 1 is raised.
 
-##### classForKey(aKey)
+#### [classForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L799)
 
 Returns the AppleScript class for the value of the specified key. The key must exist otherweise error 1 is raised.
 
-##### positionForKey(aKey)
+#### [positionForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L815)
 
 Returns the 1-based position for the specified key. The key must exist otherweise error 1 is raised.
 
-##### indexForKey(aKey)
+#### [indexForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L833)
 
 Returns the 0-based index for the specified key. The key must exist otherweise error 1 is raised.
 
-#### Key path
+### Key_path
 
-##### existsKeyPath(keyPath)
+#### [existsKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L854)
 
 Returns true if the key path can be fully satisified, otherwise false.
 
-##### tryKeyPath(keyPath, defaultValue)
+#### [tryKeyPath(keyPath, defaultValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L870)
 
 Returns the value for the key path if a value is found, other **defaultValue** is returned.
 
-##### addValueForKeyPath(keyPath, aValue)
+#### [addValueForKeyPath(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L892)
 
 Adds the specified value at the key path. The dictionaries found along the path must exist. The final key must not exist.
 
-##### addValueForKeyPathRecursively(keyPath, aValue)
+#### [addValueForKeyPathRecursively(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L916)
 
 Adds the specified value at the key path. The dictionaries found along the path **will be created automatically**. The final key must not exist.
 
-##### removeValueForKeyPath(keyPath)
+#### [removeValueForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L962)
 
 Removes the value at the specified key path.
 
-##### setValueForKeyPath(keyPath, aValue)
+#### [setValueForKeyPath(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L991)
 
 Sets the value at the specified key path. The final key and all the keys along the path must exist.
 
-##### valueForKeyPath(keyPath)
+#### [valueForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1015)
 
 Returns the value at the specified key path.
 
-##### typeForKeyPath(keyPath)
+#### [typeForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1031)
 
 Returns a string representing the type of the value at the specified key path. Error 1 is raised when any of the keys along the path do not exist.
 
-##### classForKeyPath(keyPath)
+#### [classForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1047)
 
 Returns the AppleScript class for the value at the specified key path. Error 1 is raised when any of the keys along the path do not exist.
 
-#### Input Output
+### Input_Output
 
-##### writeToFile(filePath)
+#### [writeToFile(filePath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1066)
 
 Writes this dictionary to a text file at the specified path. The path should end with .applescript
 
-##### readFromFile(filePath)
+#### [readFromFile(filePath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1117)
 
 Reads data for this dictionary from a text file generated by **writeToFile()** at the specified path.
 
-#### Representations
+### Representations
 
-##### textRepresentation()
+#### [textRepresentation()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1160)
 
 Returns a textual representation of this dictionary.
 
-##### recordRepresentation()
+#### [recordRepresentation()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1178)
 
 Returns this dictionary as an AppleScript record
 
-#### Private
+### Private
 
-##### _pos(aKey)
-##### _add(aKey, aValue, valueType)
-##### _set(pos, aKey, aValue, valueType)
-##### _sanitizeKey(aKey)
-##### _sanitizeKeyPath(keyPath)
-##### _existsKey(aKey)
-##### _existsKeyPath(keyPath, lastItem)
-##### _key(pos)
-##### _longestKey()
-##### _recursiveKeys()
-##### _value(pos)
-##### _valueForKey(aKey)
-##### _valueForKeyPath(keyPath, lastItem)
-##### _valueFromPair(pair)
-##### _valueFromPairWithType(pair, valueType)
-##### _type(pos)
-##### _typeForPair(pair)
-##### _typeForValue(aValue)
-##### _typeForKey(aKey)
-##### _classForPair(pair)
-##### _pairForKey(aKey)
-##### _pairForKeyPath(keyPath, lastItem)
-##### _newPair(aKey, aValue, valueType)
+Below are undocumented private methods that could change at any time.
 
-#### Conversion
+#### [_pos(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1225)
+#### [_add(aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1275)
+#### [_set(pos, aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1298)
+#### [_sanitizeKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1319)
+#### [_sanitizeKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1331)
+#### [_existsKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1349)
+#### [_existsKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1361)
+#### [_key(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1382)
+#### [_longestKey()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1394)
+#### [_recursiveKeys()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1418)
+#### [_value(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1451)
+#### [_valueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1463)
+#### [_valueForKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1476)
+#### [_valueFromPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1488)
+#### [_valueFromPairWithType(pair, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1500)
+#### [_type(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1548)
+#### [_typeForPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1560)
+#### [_typeForValue(aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1618)
+#### [_typeForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1653)
+#### [_classForPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1665)
+#### [_pairForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1701)
+#### [_pairForKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1713)
+#### [_newPair(aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1749)
 
-##### _convertLoadedDict(loadedDict)
-##### _convertLoadedValue(theValue, valueType)
-##### _convertLoadedList(loadedList)
-##### _convertLoadedInteger(str)
-##### _convertLoadedFloat(str)
-##### _initDecimalPointSymbol()
+### Conversion
 
-#### Dumping
+#### [_convertLoadedDict(loadedDict)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1797)
+#### [_convertLoadedValue(theValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1827)
+#### [_convertLoadedList(loadedList)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1860)
+#### [_convertLoadedInteger(str)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1885)
+#### [_convertLoadedFloat(str)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1897)
+#### [_initDecimalPointSymbol()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1917)
 
-##### _letterForType(valueType)
-##### _dump(anItem, depthLevel, dictKey)
-##### _listTextRepresentation(aList, depthLevel)
-##### _dictTextRepresentation(depthLevel)
-##### _toString(var)
+### Dumping
 
-#### List
+#### [_letterForType(valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1938)
+#### [_dump(anItem, depthLevel, dictKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1968)
+#### [_listTextRepresentation(aList, depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2035)
+#### [_dictTextRepresentation(depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2078)
+#### [_toString(var)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2124)
 
-##### _removePositionFromList(aList, aPosition)
-##### _implodeList(aList, lastItem, aDelimiter)
-##### _explodeString(aString, lastItem, aDelimiter)
+### List
 
-#### Date
+#### [_removePositionFromList(aList, aPosition)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2169)
+#### [_implodeList(aList, lastItem, aDelimiter)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2211)
+#### [_explodeString(aString, lastItem, aDelimiter)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2232)
 
-##### _dateFromTimestamp(aTimestamp)
-##### _timestamp(aDate)
+### Date
 
-#### Utilities
+#### [_dateFromTimestamp(aTimestamp)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2264)
+#### [_timestamp(aDate)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2292)
 
-##### _handleError(fnc, eMsg, eNum)
-##### _snr(aText, aPattern, aReplacement)
-##### _genIndt(depthLevel)
-##### _padWithSuffix(aText, newWidth, aSuffix)
-##### _uuid()
-##### _hfsPath(aPath)
+### Utilities
+
+#### [_handleError(fnc, eMsg, eNum)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2346)
+#### [_snr(aText, aPattern, aReplacement)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2365)
+#### [_genIndt(depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2396)
+#### [_padWithSuffix(aText, newWidth, aSuffix)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2413)
+#### [_uuid()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2451)
+#### [_hfsPath(aPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2479)
