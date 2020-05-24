@@ -3,7 +3,7 @@
 ## Contents
 
 - [Overview](#overview)
-- **Script Functions**
+- Script Functions
   - [`run`](#run)
   - [`shortTest()`](#shorttest)
   - [`speedTest()`](#speedtest)
@@ -11,14 +11,14 @@
   - [`newDictionaryWithValueForKey(k, v)`](#newdictionarywithvalueforkeyk-v)
   - [`newDictionary()`](#newdictionary)
 - Script: [`Dictionary`](#script-dictionary)
-  - **General**
+  - General
     - [`isDictionary(obj)`](#isdictionaryobj)
     - [`empty()`](#empty)
     - [`allKeys()`](#allkeys)
     - [`keyCount()`](#keycount)
     - [`allKeysRecursively()`](#allkeysrecursively)
     - [`allValues()`](#allvalues)
-  - **Key**
+  - Key
     - [`existsKey(aKey)`](#existskeyakey)
     - [`tryKey(aKey, defaultValue)`](#trykeyakey-defaultvalue)
     - [`addValueForKey(aKey, aValue)`](#addvalueforkeyakey-avalue)
@@ -29,7 +29,7 @@
     - [`classForKey(aKey)`](#classforkeyakey)
     - [`positionForKey(aKey)`](#positionforkeyakey)
     - [`indexForKey(aKey)`](#indexforkeyakey)
-  - **Key path**
+  - Key path
     - [`existsKeyPath(keyPath)`](#existskeypathkeypath)
     - [`tryKeyPath(keyPath, defaultValue)`](#trykeypathkeypath-defaultvalue)
     - [`addValueForKeyPath(keyPath, aValue)`](#addvalueforkeypathkeypath-avalue)
@@ -39,10 +39,10 @@
     - [`valueForKeyPath(keyPath)`](#valueforkeypathkeypath)
     - [`typeForKeyPath(keyPath)`](#typeforkeypathkeypath)
     - [`classForKeyPath(keyPath)`](#classforkeypathkeypath)
-  - **Input Output**
+  - Input Output
     - [`writeToFile(filePath)`](#writetofilefilepath)
     - [`readFromFile(filePath)`](#readfromfilefilepath)
-  - **Representations**
+  - Representations
     - [`textRepresentation()`](#textrepresentation)
     - [`recordRepresentation()`](#recordrepresentation)
 
