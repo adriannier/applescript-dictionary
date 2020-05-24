@@ -151,6 +151,7 @@ return dict's allKeys()
 
 Returns the count of all keys.
 
+Example:
 ```
 set dict to newDictionary()
 
@@ -163,10 +164,11 @@ end repeat
 return dict's keyCount()
 ```
 
-#### [allKeysRecursively()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L584)
+#### [allKeysRecursively()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L585)
 
 Returns the keys of this dictionary and all its nested dictionaries. The keys of nested dictionaries are returned as key paths.
 
+Example:
 ```
 set dict to newDictionary()
 
@@ -177,10 +179,11 @@ dict's addValueForKeyPathRecursively("z/b/x/d/e/f", "test")
 return dict's allKeysRecursively()
 ```
 
-#### [allValues()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L610)
+#### [allValues()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L612)
 
 Returns all values of this dictionary.
 
+Example:
 ```
 set dict to newDictionary()
 
@@ -195,101 +198,101 @@ return dict's allValues()
 
 ### Key
 
-#### [existsKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L649)
+#### [existsKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L652)
 
 Returns true if the specified key exists, otherwise false.
 
-#### [tryKey(aKey, defaultValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L667)
+#### [tryKey(aKey, defaultValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L670)
 
 If the specified key exists, its value is returned. Otherwise the value specified as **defaultValue** is returned.
 
-#### [addValueForKey(aKey, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L688)
+#### [addValueForKey(aKey, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L691)
 
 Adds the value for the specified key. The key must not exists. If it does an error 2 is raised.
 
-#### [removeValueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L716)
+#### [removeValueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L719)
 
 Removes the value for the specified key. The key must exist otherwise error 1 is raised.
 
-#### [setValueForKey(aKey, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L746)
+#### [setValueForKey(aKey, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L749)
 
 Sets the value for the specified key. The key must exist otherwise error 1 is raised.
 
-#### [valueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L765)
+#### [valueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L768)
 
 Returns the value for the specified key. The key must exist otherweise error 1 is raised.
 
-#### [typeForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L783)
+#### [typeForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L786)
 
 Returns a string representing the type of the value for the specified key. The key must exist otherweise error 1 is raised.
 
-#### [classForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L799)
+#### [classForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L802)
 
 Returns the AppleScript class for the value of the specified key. The key must exist otherweise error 1 is raised.
 
-#### [positionForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L815)
+#### [positionForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L818)
 
 Returns the 1-based position for the specified key. The key must exist otherweise error 1 is raised.
 
-#### [indexForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L833)
+#### [indexForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L836)
 
 Returns the 0-based index for the specified key. The key must exist otherweise error 1 is raised.
 
 ### Key_path
 
-#### [existsKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L854)
+#### [existsKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L857)
 
 Returns true if the key path can be fully satisified, otherwise false.
 
-#### [tryKeyPath(keyPath, defaultValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L870)
+#### [tryKeyPath(keyPath, defaultValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L873)
 
 Returns the value for the key path if a value is found, other **defaultValue** is returned.
 
-#### [addValueForKeyPath(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L892)
+#### [addValueForKeyPath(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L895)
 
 Adds the specified value at the key path. The dictionaries found along the path must exist. The final key must not exist.
 
-#### [addValueForKeyPathRecursively(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L916)
+#### [addValueForKeyPathRecursively(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L919)
 
 Adds the specified value at the key path. The dictionaries found along the path **will be created automatically**. The final key must not exist.
 
-#### [removeValueForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L962)
+#### [removeValueForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L965)
 
 Removes the value at the specified key path.
 
-#### [setValueForKeyPath(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L991)
+#### [setValueForKeyPath(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L994)
 
 Sets the value at the specified key path. The final key and all the keys along the path must exist.
 
-#### [valueForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1015)
+#### [valueForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1018)
 
 Returns the value at the specified key path.
 
-#### [typeForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1031)
+#### [typeForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1034)
 
 Returns a string representing the type of the value at the specified key path. Error 1 is raised when any of the keys along the path do not exist.
 
-#### [classForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1047)
+#### [classForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1050)
 
 Returns the AppleScript class for the value at the specified key path. Error 1 is raised when any of the keys along the path do not exist.
 
 ### Input_Output
 
-#### [writeToFile(filePath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1066)
+#### [writeToFile(filePath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1069)
 
 Writes this dictionary to a text file at the specified path. The path should end with .applescript
 
-#### [readFromFile(filePath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1117)
+#### [readFromFile(filePath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1120)
 
 Reads data for this dictionary from a text file generated by **writeToFile()** at the specified path.
 
 ### Representations
 
-#### [textRepresentation()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1160)
+#### [textRepresentation()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1163)
 
 Returns a textual representation of this dictionary.
 
-#### [recordRepresentation()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1178)
+#### [recordRepresentation()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1181)
 
 Returns this dictionary as an AppleScript record
 
@@ -297,63 +300,63 @@ Returns this dictionary as an AppleScript record
 
 Below are undocumented private methods that could change at any time.
 
-#### [_pos(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1225)
-#### [_add(aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1275)
-#### [_set(pos, aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1298)
-#### [_sanitizeKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1319)
-#### [_sanitizeKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1331)
-#### [_existsKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1349)
-#### [_existsKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1361)
-#### [_key(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1382)
-#### [_longestKey()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1394)
-#### [_recursiveKeys()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1418)
-#### [_value(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1451)
-#### [_valueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1463)
-#### [_valueForKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1476)
-#### [_valueFromPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1488)
-#### [_valueFromPairWithType(pair, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1500)
-#### [_type(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1548)
-#### [_typeForPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1560)
-#### [_typeForValue(aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1618)
-#### [_typeForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1653)
-#### [_classForPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1665)
-#### [_pairForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1701)
-#### [_pairForKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1713)
-#### [_newPair(aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1749)
+#### [_pos(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1228)
+#### [_add(aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1278)
+#### [_set(pos, aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1301)
+#### [_sanitizeKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1322)
+#### [_sanitizeKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1334)
+#### [_existsKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1352)
+#### [_existsKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1364)
+#### [_key(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1385)
+#### [_longestKey()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1397)
+#### [_recursiveKeys()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1421)
+#### [_value(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1454)
+#### [_valueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1466)
+#### [_valueForKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1479)
+#### [_valueFromPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1491)
+#### [_valueFromPairWithType(pair, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1503)
+#### [_type(pos)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1551)
+#### [_typeForPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1563)
+#### [_typeForValue(aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1621)
+#### [_typeForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1656)
+#### [_classForPair(pair)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1668)
+#### [_pairForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1704)
+#### [_pairForKeyPath(keyPath, lastItem)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1716)
+#### [_newPair(aKey, aValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1752)
 
 ### Conversion
 
-#### [_convertLoadedDict(loadedDict)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1797)
-#### [_convertLoadedValue(theValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1827)
-#### [_convertLoadedList(loadedList)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1860)
-#### [_convertLoadedInteger(str)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1885)
-#### [_convertLoadedFloat(str)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1897)
-#### [_initDecimalPointSymbol()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1917)
+#### [_convertLoadedDict(loadedDict)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1800)
+#### [_convertLoadedValue(theValue, valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1830)
+#### [_convertLoadedList(loadedList)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1863)
+#### [_convertLoadedInteger(str)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1888)
+#### [_convertLoadedFloat(str)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1900)
+#### [_initDecimalPointSymbol()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1920)
 
 ### Dumping
 
-#### [_letterForType(valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1938)
-#### [_dump(anItem, depthLevel, dictKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1968)
-#### [_listTextRepresentation(aList, depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2035)
-#### [_dictTextRepresentation(depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2078)
-#### [_toString(var)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2124)
+#### [_letterForType(valueType)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1941)
+#### [_dump(anItem, depthLevel, dictKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1971)
+#### [_listTextRepresentation(aList, depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2038)
+#### [_dictTextRepresentation(depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2081)
+#### [_toString(var)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2127)
 
 ### List
 
-#### [_removePositionFromList(aList, aPosition)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2169)
-#### [_implodeList(aList, lastItem, aDelimiter)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2211)
-#### [_explodeString(aString, lastItem, aDelimiter)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2232)
+#### [_removePositionFromList(aList, aPosition)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2172)
+#### [_implodeList(aList, lastItem, aDelimiter)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2214)
+#### [_explodeString(aString, lastItem, aDelimiter)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2235)
 
 ### Date
 
-#### [_dateFromTimestamp(aTimestamp)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2264)
-#### [_timestamp(aDate)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2292)
+#### [_dateFromTimestamp(aTimestamp)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2267)
+#### [_timestamp(aDate)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2295)
 
 ### Utilities
 
-#### [_handleError(fnc, eMsg, eNum)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2346)
-#### [_snr(aText, aPattern, aReplacement)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2365)
-#### [_genIndt(depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2396)
-#### [_padWithSuffix(aText, newWidth, aSuffix)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2413)
-#### [_uuid()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2451)
-#### [_hfsPath(aPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2479)
+#### [_handleError(fnc, eMsg, eNum)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2349)
+#### [_snr(aText, aPattern, aReplacement)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2368)
+#### [_genIndt(depthLevel)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2399)
+#### [_padWithSuffix(aText, newWidth, aSuffix)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2416)
+#### [_uuid()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2454)
+#### [_hfsPath(aPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L2482)
