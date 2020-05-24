@@ -10,7 +10,7 @@
   - [`longTest()`](#longtest)
   - [`newDictionaryWithValueForKey(k, v)`](#newdictionarywithvalueforkeyk-v)
   - [`newDictionary()`](#newdictionary)
-- Script: [`Dictionary`](#script-dictionary)
+- [Script:`Dictionary`](#script-dictionary)
   - [General](#general)
     - [`isDictionary(obj)`](#isdictionaryobj)
     - [`empty()`](#empty)
