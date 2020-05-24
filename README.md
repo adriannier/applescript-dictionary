@@ -3,47 +3,48 @@
 ## Contents
 
 - [Overview](#overview)
-- [run](#run)
-- [`shortTest()`](#shorttest)
-- [speedTest()](#speedtest)
-- [longTest()](#longtest)
-- [newDictionaryWithValueForKey(k, v)](#newdictionarywithvalueforkeyk-v)
-- [newDictionary()](#newdictionary)
-- [Script: Dictionary](#script-dictionary)
+- **Script Functions**
+  - [`run`](#run)
+  - [`shortTest()`](#shorttest)
+  - [`speedTest()`](#speedtest)
+  - [`longTest()`](#longtest)
+  - [`newDictionaryWithValueForKey(k, v)`](#newdictionarywithvalueforkeyk-v)
+  - [`newDictionary()`](#newdictionary)
+- Script: [`Dictionary`](#script-dictionary)
   - **General**
-    - [isDictionary(obj)](#isdictionaryobj)
-    - [empty()](#empty)
-    - [allKeys()](#allkeys)
-    - [keyCount()](#keycount)
-    - [allKeysRecursively()](#allkeysrecursively)
-    - [allValues()](#allvalues)
+    - [`isDictionary(obj)`](#isdictionaryobj)
+    - [`empty()`](#empty)
+    - [`allKeys()`](#allkeys)
+    - [`keyCount()`](#keycount)
+    - [`allKeysRecursively()`](#allkeysrecursively)
+    - [`allValues()`](#allvalues)
   - **Key**
-    - [existsKey(aKey)](#existskeyakey)
-    - [tryKey(aKey, defaultValue)](#trykeyakey-defaultvalue)
-    - [addValueForKey(aKey, aValue)](#addvalueforkeyakey-avalue)
-    - [removeValueForKey(aKey)](#removevalueforkeyakey)
-    - [setValueForKey(aKey, aValue)](#setvalueforkeyakey-avalue)
-    - [valueForKey(aKey)](#valueforkeyakey)
-    - [typeForKey(aKey)](#typeforkeyakey)
-    - [classForKey(aKey)](#classforkeyakey)
-    - [positionForKey(aKey)](#positionforkeyakey)
-    - [indexForKey(aKey)](#indexforkeyakey)
+    - [`existsKey(aKey)`](#existskeyakey)
+    - [`tryKey(aKey, defaultValue)`](#trykeyakey-defaultvalue)
+    - [`addValueForKey(aKey, aValue)`](#addvalueforkeyakey-avalue)
+    - [`removeValueForKey(aKey)`](#removevalueforkeyakey)
+    - [`setValueForKey(aKey, aValue)`](#setvalueforkeyakey-avalue)
+    - [`valueForKey(aKey)`](#valueforkeyakey)
+    - [`typeForKey(aKey)`](#typeforkeyakey)
+    - [`classForKey(aKey)`](#classforkeyakey)
+    - [`positionForKey(aKey)`](#positionforkeyakey)
+    - [`indexForKey(aKey)`](#indexforkeyakey)
   - **Key path**
-    - [existsKeyPath(keyPath)](#existskeypathkeypath)
-    - [tryKeyPath(keyPath, defaultValue)](#trykeypathkeypath-defaultvalue)
-    - [addValueForKeyPath(keyPath, aValue)](#addvalueforkeypathkeypath-avalue)
-    - [addValueForKeyPathRecursively(keyPath, aValue)](#addvalueforkeypathrecursivelykeypath-avalue)
-    - [removeValueForKeyPath(keyPath)](#removevalueforkeypathkeypath)
-    - [setValueForKeyPath(keyPath, aValue)](#setvalueforkeypathkeypath-avalue)
-    - [valueForKeyPath(keyPath)](#valueforkeypathkeypath)
-    - [typeForKeyPath(keyPath)](#typeforkeypathkeypath)
-    - [classForKeyPath(keyPath)](#classforkeypathkeypath)
+    - [`existsKeyPath(keyPath)`](#existskeypathkeypath)
+    - [`tryKeyPath(keyPath, defaultValue)`](#trykeypathkeypath-defaultvalue)
+    - [`addValueForKeyPath(keyPath, aValue)`](#addvalueforkeypathkeypath-avalue)
+    - [`addValueForKeyPathRecursively(keyPath, aValue)`](#addvalueforkeypathrecursivelykeypath-avalue)
+    - [`removeValueForKeyPath(keyPath)`](#removevalueforkeypathkeypath)
+    - [`setValueForKeyPath(keyPath, aValue)`](#setvalueforkeypathkeypath-avalue)
+    - [`valueForKeyPath(keyPath)`](#valueforkeypathkeypath)
+    - [`typeForKeyPath(keyPath)`](#typeforkeypathkeypath)
+    - [`classForKeyPath(keyPath)`](#classforkeypathkeypath)
   - **Input Output**
-    - [writeToFile(filePath)](#writetofilefilepath)
-    - [readFromFile(filePath)](#readfromfilefilepath)
+    - [`writeToFile(filePath)`](#writetofilefilepath)
+    - [`readFromFile(filePath)`](#readfromfilefilepath)
   - **Representations**
-    - [textRepresentation()](#textrepresentation)
-    - [recordRepresentation()](#recordrepresentation)
+    - [`textRepresentation()`](#textrepresentation)
+    - [`recordRepresentation()`](#recordrepresentation)
 
 ## Overview
 
@@ -120,27 +121,30 @@ Special care was placed upon the human readability of the produced output. Once 
 - `a` list (array)
 - `r` record
 - `v` unknown value
-## run
+
+## Script Functions
+
+### run
 
 Runs all tests.
 
-## shortTest()
+### shortTest()
 
 Performs a short test.
 
-## speedTest()
+### speedTest()
 
 Performs a speed test creating 1000 dictionary items and modifying them.
 
-## longTest()
+### longTest()
 
 Performs a long test.
 
-## newDictionaryWithValueForKey(k, v)
+### newDictionaryWithValueForKey(k, v)
 
 Creates a new dictionary adding the value for the specified key.
 
-## newDictionary()
+### newDictionary()
 
 Returns an empty dictionary.
 
