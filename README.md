@@ -124,35 +124,35 @@ Special care was placed upon the human readability of the produced output. Once 
 
 ## Script Functions
 
-### `run`
+### [run](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L86)
 
 Runs all tests.
 
-### `shortTest()`
+### [shortTest()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L98)
 
 Performs a short test.
 
-### `speedTest()`
+### [speedTest()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L137)
 
 Performs a speed test creating 1000 dictionary items and modifying them.
 
-### `longTest()`
+### [longTest()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L179)
 
 Performs a long test.
 
-### `newDictionaryWithValueForKey(k, v)`
+### [newDictionaryWithValueForKey(k, v)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L430)
 
 Creates a new dictionary adding the value for the specified key.
 
-### `newDictionary()`
+### [newDictionary()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L444)
 
 Returns an empty dictionary.
 
-## Script: Dictionary
+## [Script: Dictionary](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L450)
 
 ### General
 
-#### `isDictionary(obj)`
+#### [isDictionary(obj)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L470)
 
 Checks whether the specified object is a dictionary.
 
@@ -163,7 +163,7 @@ set dict2 to newDictionary()
 return dict's isDictionary(dict2)
 ```
 
-#### `empty()`
+#### [empty()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L493)
 
 Checks whether this dictionary is empty.
 
@@ -178,7 +178,7 @@ if dict's empty() then
 end if
 ```
 
-#### `allKeys()`
+#### [allKeys()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L524)
 
 Returns all keys.
 
@@ -195,7 +195,7 @@ end repeat
 return dict's allKeys()
 ```
 
-#### `keyCount()`
+#### [keyCount()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L553)
 
 Returns the count of all keys.
 
@@ -212,7 +212,7 @@ end repeat
 return dict's keyCount()
 ```
 
-#### `allKeysRecursively()`
+#### [allKeysRecursively()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L582)
 
 Returns the keys of this dictionary and all its nested dictionaries. The keys of nested dictionaries are returned as key paths.
 
@@ -227,7 +227,7 @@ dict's addValueForKeyPathRecursively("z/b/x/d/e/f", "test")
 return dict's allKeysRecursively()
 ```
 
-#### `allValues()`
+#### [allValues()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L609)
 
 Returns all values of this dictionary.
 
@@ -246,100 +246,100 @@ return dict's allValues()
 
 ### Key
 
-#### `existsKey(aKey)`
+#### [existsKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L649)
 
 Returns true if the specified key exists, otherwise false.
 
-#### `tryKey(aKey, defaultValue)`
+#### [tryKey(aKey, defaultValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L667)
 
 If the specified key exists, its value is returned. Otherwise the value specified as **defaultValue** is returned.
 
-#### `addValueForKey(aKey, aValue)`
+#### [addValueForKey(aKey, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L688)
 
 Adds the value for the specified key. The key must not exists. If it does an error 2 is raised.
 
-#### `removeValueForKey(aKey)`
+#### [removeValueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L716)
 
 Removes the value for the specified key. The key must exist otherwise error 1 is raised.
 
-#### `setValueForKey(aKey, aValue)`
+#### [setValueForKey(aKey, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L746)
 
 Sets the value for the specified key. The key must exist otherwise error 1 is raised.
 
-#### `valueForKey(aKey)`
+#### [valueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L765)
 
 Returns the value for the specified key. The key must exist otherweise error 1 is raised.
 
-#### `typeForKey(aKey)`
+#### [typeForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L783)
 
 Returns a string representing the type of the value for the specified key. The key must exist otherweise error 1 is raised.
 
-#### `classForKey(aKey)`
+#### [classForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L799)
 
 Returns the AppleScript class for the value of the specified key. The key must exist otherweise error 1 is raised.
 
-#### `positionForKey(aKey)`
+#### [positionForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L815)
 
 Returns the 1-based position for the specified key. The key must exist otherweise error 1 is raised.
 
-#### `indexForKey(aKey)`
+#### [indexForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L833)
 
 Returns the 0-based index for the specified key. The key must exist otherweise error 1 is raised.
 
 ### Key path
 
-#### `existsKeyPath(keyPath)`
+#### [existsKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L854)
 
 Returns true if the key path can be fully satisified, otherwise false.
 
-#### `tryKeyPath(keyPath, defaultValue)`
+#### [tryKeyPath(keyPath, defaultValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L870)
 
 Returns the value for the key path if a value is found, other **defaultValue** is returned.
 
-#### `addValueForKeyPath(keyPath, aValue)`
+#### [addValueForKeyPath(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L892)
 
 Adds the specified value at the key path. The dictionaries found along the path must exist. The final key must not exist.
 
-#### `addValueForKeyPathRecursively(keyPath, aValue)`
+#### [addValueForKeyPathRecursively(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L916)
 
 Adds the specified value at the key path. The dictionaries found along the path **will be created automatically**. The final key must not exist.
 
-#### `removeValueForKeyPath(keyPath)`
+#### [removeValueForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L962)
 
 Removes the value at the specified key path.
 
-#### `setValueForKeyPath(keyPath, aValue)`
+#### [setValueForKeyPath(keyPath, aValue)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L991)
 
 Sets the value at the specified key path. The final key and all the keys along the path must exist.
 
-#### `valueForKeyPath(keyPath)`
+#### [valueForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1015)
 
 Returns the value at the specified key path.
 
-#### `typeForKeyPath(keyPath)`
+#### [typeForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1031)
 
 Returns a string representing the type of the value at the specified key path. Error 1 is raised when any of the keys along the path do not exist.
 
-#### `classForKeyPath(keyPath)`
+#### [classForKeyPath(keyPath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1047)
 
 Returns the AppleScript class for the value at the specified key path. Error 1 is raised when any of the keys along the path do not exist.
 
 ### Input Output
 
-#### `writeToFile(filePath)`
+#### [writeToFile(filePath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1066)
 
 Writes this dictionary to a text file at the specified path. The path should end with .applescript
 
-#### `readFromFile(filePath)`
+#### [readFromFile(filePath)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1117)
 
 Reads data for this dictionary from a text file generated by **writeToFile()** at the specified path.
 
 ### Representations
 
-#### `textRepresentation()`
+#### [textRepresentation()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1160)
 
 Returns a textual representation of this dictionary.
 
-#### `recordRepresentation()`
+#### [recordRepresentation()](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L1178)
 
 Returns this dictionary as an AppleScript record
