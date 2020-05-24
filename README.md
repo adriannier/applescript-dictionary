@@ -4,12 +4,12 @@
 
 - [Overview](#overview)
 - [run](#run)
-- [shortTest()](#shorttest)
+- [`shortTest()`](#shorttest)
 - [speedTest()](#speedtest)
 - [longTest()](#longtest)
 - [newDictionaryWithValueForKey(k, v)](#newdictionarywithvalueforkeyk-v)
 - [newDictionary()](#newdictionary)
-- Dictionary
+- [Script: Dictionary](#script-dictionary)
   - **General**
     - [isDictionary(obj)](#isdictionaryobj)
     - [empty()](#empty)
