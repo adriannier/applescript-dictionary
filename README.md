@@ -10,7 +10,6 @@
   - [`longTest()`](#longtest)
   - [`newDictionaryWithValueForKey(k, v)`](#newdictionarywithvalueforkeyk-v)
   - [`newDictionary()`](#newdictionary)
-  
 - [Script:`Dictionary`](#script-dictionary)
   - [General](#general)
     - [`isDictionary(obj)`](#isdictionaryobj)
@@ -19,7 +18,6 @@
     - [`keyCount()`](#keycount)
     - [`allKeysRecursively()`](#allkeysrecursively)
     - [`allValues()`](#allvalues)
-  
   - [Key](#key)
     - [`existsKey(aKey)`](#existskeyakey)
     - [`tryKey(aKey, defaultValue)`](#trykeyakey-defaultvalue)
@@ -31,7 +29,6 @@
     - [`classForKey(aKey)`](#classforkeyakey)
     - [`positionForKey(aKey)`](#positionforkeyakey)
     - [`indexForKey(aKey)`](#indexforkeyakey)
-  
   - [Key path](#keypath)
     - [`existsKeyPath(keyPath)`](#existskeypathkeypath)
     - [`tryKeyPath(keyPath, defaultValue)`](#trykeypathkeypath-defaultvalue)
@@ -42,15 +39,12 @@
     - [`valueForKeyPath(keyPath)`](#valueforkeypathkeypath)
     - [`typeForKeyPath(keyPath)`](#typeforkeypathkeypath)
     - [`classForKeyPath(keyPath)`](#classforkeypathkeypath)
-  
   - [Input Output](#inputoutput)
     - [`writeToFile(filePath)`](#writetofilefilepath)
     - [`readFromFile(filePath)`](#readfromfilefilepath)
-  
   - [Representations](#representations)
     - [`textRepresentation()`](#textrepresentation)
     - [`recordRepresentation()`](#recordrepresentation)
-  
 
 ## Overview
 
