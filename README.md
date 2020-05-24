@@ -124,27 +124,27 @@ Special care was placed upon the human readability of the produced output. Once 
 
 ## Script Functions
 
-### run
+### `run`
 
 Runs all tests.
 
-### shortTest()
+### `shortTest()`
 
 Performs a short test.
 
-### speedTest()
+### `speedTest()`
 
 Performs a speed test creating 1000 dictionary items and modifying them.
 
-### longTest()
+### `longTest()`
 
 Performs a long test.
 
-### newDictionaryWithValueForKey(k, v)
+### `newDictionaryWithValueForKey(k, v)`
 
 Creates a new dictionary adding the value for the specified key.
 
-### newDictionary()
+### `newDictionary()`
 
 Returns an empty dictionary.
 
@@ -152,7 +152,7 @@ Returns an empty dictionary.
 
 ### General
 
-#### isDictionary(obj)
+#### `isDictionary(obj)`
 
 Checks whether the specified object is a dictionary.
 
@@ -163,7 +163,7 @@ set dict2 to newDictionary()
 return dict's isDictionary(dict2)
 ```
 
-#### empty()
+#### `empty()`
 
 Checks whether this dictionary is empty.
 
@@ -178,7 +178,7 @@ if dict's empty() then
 end if
 ```
 
-#### allKeys()
+#### `allKeys()`
 
 Returns all keys.
 
@@ -195,7 +195,7 @@ end repeat
 return dict's allKeys()
 ```
 
-#### keyCount()
+#### `keyCount()`
 
 Returns the count of all keys.
 
@@ -212,7 +212,7 @@ end repeat
 return dict's keyCount()
 ```
 
-#### allKeysRecursively()
+#### `allKeysRecursively()`
 
 Returns the keys of this dictionary and all its nested dictionaries. The keys of nested dictionaries are returned as key paths.
 
@@ -227,7 +227,7 @@ dict's addValueForKeyPathRecursively("z/b/x/d/e/f", "test")
 return dict's allKeysRecursively()
 ```
 
-#### allValues()
+#### `allValues()`
 
 Returns all values of this dictionary.
 
@@ -246,101 +246,101 @@ return dict's allValues()
 
 ### Key
 
-#### existsKey(aKey)
+#### `existsKey(aKey)`
 
 Returns true if the specified key exists, otherwise false.
 
-#### tryKey(aKey, defaultValue)
+#### `tryKey(aKey, defaultValue)`
 
 If the specified key exists, its value is returned. Otherwise the value specified as **defaultValue** is returned.
 
-#### addValueForKey(aKey, aValue)
+#### `addValueForKey(aKey, aValue)`
 
 Adds the value for the specified key. The key must not exists. If it does an error 2 is raised.
 
-#### removeValueForKey(aKey)
+#### `removeValueForKey(aKey)`
 
 Removes the value for the specified key. The key must exist otherwise error 1 is raised.
 
-#### setValueForKey(aKey, aValue)
+#### `setValueForKey(aKey, aValue)`
 
 Sets the value for the specified key. The key must exist otherwise error 1 is raised.
 
-#### valueForKey(aKey)
+#### `valueForKey(aKey)`
 
 Returns the value for the specified key. The key must exist otherweise error 1 is raised.
 
-#### typeForKey(aKey)
+#### `typeForKey(aKey)`
 
 Returns a string representing the type of the value for the specified key. The key must exist otherweise error 1 is raised.
 
-#### classForKey(aKey)
+#### `classForKey(aKey)`
 
 Returns the AppleScript class for the value of the specified key. The key must exist otherweise error 1 is raised.
 
-#### positionForKey(aKey)
+#### `positionForKey(aKey)`
 
 Returns the 1-based position for the specified key. The key must exist otherweise error 1 is raised.
 
-#### indexForKey(aKey)
+#### `indexForKey(aKey)`
 
 Returns the 0-based index for the specified key. The key must exist otherweise error 1 is raised.
 
 ### Key path
 
-#### existsKeyPath(keyPath)
+#### `existsKeyPath(keyPath)`
 
 Returns true if the key path can be fully satisified, otherwise false.
 
-#### tryKeyPath(keyPath, defaultValue)
+#### `tryKeyPath(keyPath, defaultValue)`
 
 Returns the value for the key path if a value is found, other **defaultValue** is returned.
 
-#### addValueForKeyPath(keyPath, aValue)
+#### `addValueForKeyPath(keyPath, aValue)`
 
 Adds the specified value at the key path. The dictionaries found along the path must exist. The final key must not exist.
 
-#### addValueForKeyPathRecursively(keyPath, aValue)
+#### `addValueForKeyPathRecursively(keyPath, aValue)`
 
 Adds the specified value at the key path. The dictionaries found along the path **will be created automatically**. The final key must not exist.
 
-#### removeValueForKeyPath(keyPath)
+#### `removeValueForKeyPath(keyPath)`
 
 Removes the value at the specified key path.
 
-#### setValueForKeyPath(keyPath, aValue)
+#### `setValueForKeyPath(keyPath, aValue)`
 
 Sets the value at the specified key path. The final key and all the keys along the path must exist.
 
-#### valueForKeyPath(keyPath)
+#### `valueForKeyPath(keyPath)`
 
 Returns the value at the specified key path.
 
-#### typeForKeyPath(keyPath)
+#### `typeForKeyPath(keyPath)`
 
 Returns a string representing the type of the value at the specified key path. Error 1 is raised when any of the keys along the path do not exist.
 
-#### classForKeyPath(keyPath)
+#### `classForKeyPath(keyPath)`
 
 Returns the AppleScript class for the value at the specified key path. Error 1 is raised when any of the keys along the path do not exist.
 
 ### Input Output
 
-#### writeToFile(filePath)
+#### `writeToFile(filePath)`
 
 Writes this dictionary to a text file at the specified path. The path should end with .applescript
 
-#### readFromFile(filePath)
+#### `readFromFile(filePath)`
 
 Reads data for this dictionary from a text file generated by **writeToFile()** at the specified path.
 
 ### Representations
 
-#### textRepresentation()
+#### `textRepresentation()`
 
 Returns a textual representation of this dictionary.
 
-#### recordRepresentation()
+#### `recordRepresentation()`
 
 Returns this dictionary as an AppleScript record
 
@@ -348,63 +348,63 @@ Returns this dictionary as an AppleScript record
 
 Below are undocumented private methods that could change at any time.
 
-#### _pos(aKey)
-#### _add(aKey, aValue, valueType)
-#### _set(pos, aKey, aValue, valueType)
-#### _sanitizeKey(aKey)
-#### _sanitizeKeyPath(keyPath)
-#### _existsKey(aKey)
-#### _existsKeyPath(keyPath, lastItem)
-#### _key(pos)
-#### _longestKey()
-#### _recursiveKeys()
-#### _value(pos)
-#### _valueForKey(aKey)
-#### _valueForKeyPath(keyPath, lastItem)
-#### _valueFromPair(pair)
-#### _valueFromPairWithType(pair, valueType)
-#### _type(pos)
-#### _typeForPair(pair)
-#### _typeForValue(aValue)
-#### _typeForKey(aKey)
-#### _classForPair(pair)
-#### _pairForKey(aKey)
-#### _pairForKeyPath(keyPath, lastItem)
-#### _newPair(aKey, aValue, valueType)
+#### `_pos(aKey)`
+#### `_add(aKey, aValue, valueType)`
+#### `_set(pos, aKey, aValue, valueType)`
+#### `_sanitizeKey(aKey)`
+#### `_sanitizeKeyPath(keyPath)`
+#### `_existsKey(aKey)`
+#### `_existsKeyPath(keyPath, lastItem)`
+#### `_key(pos)`
+#### `_longestKey()`
+#### `_recursiveKeys()`
+#### `_value(pos)`
+#### `_valueForKey(aKey)`
+#### `_valueForKeyPath(keyPath, lastItem)`
+#### `_valueFromPair(pair)`
+#### `_valueFromPairWithType(pair, valueType)`
+#### `_type(pos)`
+#### `_typeForPair(pair)`
+#### `_typeForValue(aValue)`
+#### `_typeForKey(aKey)`
+#### `_classForPair(pair)`
+#### `_pairForKey(aKey)`
+#### `_pairForKeyPath(keyPath, lastItem)`
+#### `_newPair(aKey, aValue, valueType)`
 
 ### Conversion
 
-#### _convertLoadedDict(loadedDict)
-#### _convertLoadedValue(theValue, valueType)
-#### _convertLoadedList(loadedList)
-#### _convertLoadedInteger(str)
-#### _convertLoadedFloat(str)
-#### _initDecimalPointSymbol()
+#### `_convertLoadedDict(loadedDict)`
+#### `_convertLoadedValue(theValue, valueType)`
+#### `_convertLoadedList(loadedList)`
+#### `_convertLoadedInteger(str)`
+#### `_convertLoadedFloat(str)`
+#### `_initDecimalPointSymbol()`
 
 ### Dumping
 
-#### _letterForType(valueType)
-#### _dump(anItem, depthLevel, dictKey)
-#### _listTextRepresentation(aList, depthLevel)
-#### _dictTextRepresentation(depthLevel)
-#### _toString(var)
+#### `_letterForType(valueType)`
+#### `_dump(anItem, depthLevel, dictKey)`
+#### `_listTextRepresentation(aList, depthLevel)`
+#### `_dictTextRepresentation(depthLevel)`
+#### `_toString(var)`
 
 ### List
 
-#### _removePositionFromList(aList, aPosition)
-#### _implodeList(aList, lastItem, aDelimiter)
-#### _explodeString(aString, lastItem, aDelimiter)
+#### `_removePositionFromList(aList, aPosition)`
+#### `_implodeList(aList, lastItem, aDelimiter)`
+#### `_explodeString(aString, lastItem, aDelimiter)`
 
 ### Date
 
-#### _dateFromTimestamp(aTimestamp)
-#### _timestamp(aDate)
+#### `_dateFromTimestamp(aTimestamp)`
+#### `_timestamp(aDate)`
 
 ### Utilities
 
-#### _handleError(fnc, eMsg, eNum)
-#### _snr(aText, aPattern, aReplacement)
-#### _genIndt(depthLevel)
-#### _padWithSuffix(aText, newWidth, aSuffix)
-#### _uuid()
-#### _hfsPath(aPath)
+#### `_handleError(fnc, eMsg, eNum)`
+#### `_snr(aText, aPattern, aReplacement)`
+#### `_genIndt(depthLevel)`
+#### `_padWithSuffix(aText, newWidth, aSuffix)`
+#### `_uuid()`
+#### `_hfsPath(aPath)`
