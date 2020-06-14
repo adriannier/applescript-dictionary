@@ -268,23 +268,23 @@ Sets the value for the specified key. The key must exist otherwise error 1 is ra
 
 #### [valueForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L765)
 
-Returns the value for the specified key. The key must exist otherweise error 1 is raised.
+Returns the value for the specified key. The key must exist otherwise error 1 is raised.
 
 #### [typeForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L783)
 
-Returns a string representing the type of the value for the specified key. The key must exist otherweise error 1 is raised.
+Returns a string representing the type of the value for the specified key. The key must exist otherwise error 1 is raised.
 
 #### [classForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L799)
 
-Returns the AppleScript class for the value of the specified key. The key must exist otherweise error 1 is raised.
+Returns the AppleScript class for the value of the specified key. The key must exist otherwise error 1 is raised.
 
 #### [positionForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L815)
 
-Returns the 1-based position for the specified key. The key must exist otherweise error 1 is raised.
+Returns the 1-based position for the specified key. The key must exist otherwise error 1 is raised.
 
 #### [indexForKey(aKey)](https://github.com/adriannier/applescript-dictionary/blob/master/Dictionary.applescript#L833)
 
-Returns the 0-based index for the specified key. The key must exist otherweise error 1 is raised.
+Returns the 0-based index for the specified key. The key must exist otherwise error 1 is raised.
 
 ### Key path
 
